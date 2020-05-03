@@ -52,15 +52,15 @@ export default function ControlledTreeView() {
                         onNodeSelect={handleSelect}
                     >
                         <TreeItem nodeId="1" label="Applications">
-                            <Link to="/">   <TreeItem nodeId="2" label="Calendar" /></Link>
-                            <Link to="/page2"><TreeItem nodeId="3" label="Chrome" /></Link>
-                            <Link to="/page3"><TreeItem nodeId="4" label="Webstorm" /></Link>
+                            <Link className={Style.link} to="/">   <TreeItem nodeId="2" label="Calendar" /></Link>
+                            <Link className={Style.link} to="/page2"><TreeItem  nodeId="3" label="Chrome" /></Link>
+                            <Link className={Style.link} to="/page3"><TreeItem nodeId="4" label="Webstorm" /></Link>
                         </TreeItem>
                         <TreeItem nodeId="5" label="Documents">
                             <TreeItem nodeId="6" label="Material-UI">
                                 <TreeItem nodeId="7" label="src">
-                                <Link to="/page4">   <TreeItem nodeId="8" label="index.js" /> </Link>
-                                <Link to="/page5">   <TreeItem nodeId="9" label="tree-view.js" /> </Link>
+                                <Link className={Style.link} to="/page4">   <TreeItem nodeId="8" label="index.js" /> </Link>
+                                <Link className={Style.link} to="/page5">   <TreeItem nodeId="9" label="tree-view.js" /> </Link>
                                 </TreeItem>
                             </TreeItem>
                         </TreeItem>
