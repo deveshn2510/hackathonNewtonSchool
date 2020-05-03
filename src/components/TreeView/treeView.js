@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import TreeView from '@material-ui/lab/TreeView';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
@@ -52,32 +52,32 @@ export default function ControlledTreeView() {
                         onNodeSelect={handleSelect}
                     >
                         <TreeItem nodeId="1" label="Applications">
-                            <Link to="/login">   <TreeItem nodeId="2" label="Calendar" /></Link>
-                            <TreeItem nodeId="3" label="Chrome" />
-                            <TreeItem nodeId="4" label="Webstorm" />
+                            <Link to="/">   <TreeItem nodeId="2" label="Calendar" /></Link>
+                            <Link to="/page2"><TreeItem nodeId="3" label="Chrome" /></Link>
+                            <Link to="/page3"><TreeItem nodeId="4" label="Webstorm" /></Link>
                         </TreeItem>
                         <TreeItem nodeId="5" label="Documents">
                             <TreeItem nodeId="6" label="Material-UI">
                                 <TreeItem nodeId="7" label="src">
-                                    <TreeItem nodeId="8" label="index.js" />
-                                    <TreeItem nodeId="9" label="tree-view.js" />
+                                <Link to="/page4">   <TreeItem nodeId="8" label="index.js" /> </Link>
+                                <Link to="/page5">   <TreeItem nodeId="9" label="tree-view.js" /> </Link>
                                 </TreeItem>
                             </TreeItem>
                         </TreeItem>
                     </TreeView>
                 </div>
                 <div className={Style.innerContainers2}>
-                    This is home page
+                    <Switch>
+                        <Route path="/" exact component={Page1} />
+                        <Route path="/page2" exact component={Page2} />
+                        <Route path="/page3" exact component={Page3} />
+                        <Route path="/page4" exact component={Page4} />
+                        <Route path="/page5" exact component={Page5} />
+
+                    </Switch>
                 </div>
             </div>
-            <Switch>
-                <Route path="/" exact component={Page1} />
-                <Route path="/login" exact component={Page2} />
-                <Route path="/destination" exact component={Page3} />
-                <Route path="/about" exact component={Page4} />
-                <Route path="/contactUs" exact component={Page5} />
 
-            </Switch>
         </Router>
 
 
