@@ -1,0 +1,18 @@
+.container{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+.innerContainers1{
+    flex:1;
+}
+
+
+.innerContainers2{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 50px;
+    justify-content: start;
+    flex:5;
+}
